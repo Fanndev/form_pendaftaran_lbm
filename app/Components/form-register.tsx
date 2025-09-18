@@ -17,9 +17,9 @@ export default function Form() {
     program: '',
   });
 
-  const [tandaTangan, setTandaTangan] = useState(null);
+  const [tandaTangan, setTandaTangan] = useState<string | null>(null);
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -27,18 +27,18 @@ export default function Form() {
     }));
   };
   
-  const handleSignatureUpload = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        setTandaTangan(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  // const handleSignatureUpload = (e:any) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       setTandaTangan(reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     const signatureText = tandaTangan ? "Tanda tangan telah diunggah." : "Tanda tangan tidak diunggah.";
@@ -170,7 +170,7 @@ export default function Form() {
           
           <div className="mt-4">
             <label htmlFor="tandaTanganFile" className="block text-sm font-medium text-gray-600">Unggah Tanda Tangan</label>
-            <input type="file" id="tandaTanganFile" onChange={handleSignatureUpload} accept="image/*" className="mt-1 block text-gray-700 w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
+            <input type="file" id="tandaTanganFile" accept="image/*" className="mt-1 block text-gray-700 w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"/>
             {tandaTangan && (
               <div className="mt-4">
                 <p className="text-xs text-green-600">Pratinjau tanda tangan:</p>
