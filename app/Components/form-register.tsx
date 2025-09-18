@@ -83,7 +83,7 @@ export default function Form() {
 
   return (
     <div className="bg-white p-8 rounded-xl shadow-2xl max-w-4xl mx-auto border-t-8 border-blue-500">
-      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-2">Formulir Pendaftaran Program</h1>
+      <h1 className="text-3xl font-extrabold text-center text-gray-800 mb-2">Formulir Pendaftaran Program LBM</h1>
       <p className="text-center text-gray-500 mb-8">Silakan isi data diri Anda untuk mendaftar.</p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
