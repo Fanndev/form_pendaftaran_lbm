@@ -76,7 +76,7 @@ export default function Form() {
 
     // Ganti YOUR_PHONE_NUMBER_HERE dengan nomor WhatsApp Anda
     const encodedContent = encodeURIComponent(formContent);
-    const whatsappUrl = `https://wa.me/6282339543018?text=${encodedContent}`;
+    const whatsappUrl = `https://wa.me/6281915991249?text=${encodedContent}`;
     
     window.open(whatsappUrl, '_blank');
   };
